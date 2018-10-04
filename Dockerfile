@@ -5,7 +5,7 @@ RUN apk add --no-cache \
 		sed \
 		tar
 
-ENV MAGENTO_VERSION CE-2.2.6
+ENV MAGENTO_VERSION CE-2.2.4
 
 COPY startup.sh /usr/local/bin/startup.sh
 RUN chmod +x /usr/local/bin/startup.sh && \
