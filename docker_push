@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -z "${TRAVIS_BRANCH}" ]; then
+  echo >&2 "The TRAVIS_BRANCH variable is not set"
+  exit 1
+fi
+if [ -z "${TRAVIS_PULL_REQUEST}" ]; then
+  echo >&2 "The TRAVIS_PULL_REQUEST variable is not set"
+  exit 1
+fi
+
+if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
+  echo >&2 "This is a PR, so no push to docker please."
+else
+  docker build -t dkrud5g/magento-appdata:${TRAVIS_BRANCH} .
+  echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+  docker push dkrud5g/magento-appdata:${TRAVIS_BRANCH}
+fi
+
