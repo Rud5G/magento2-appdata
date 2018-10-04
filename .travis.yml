@@ -3,6 +3,5 @@ language: ruby
 services:
 - docker
 before_install:
-- echo $dockerhub_username | cat
 - echo "$dockerhub_password" | docker login --username "$dockerhub_username" --password-stdin
 script: bash docker_push
