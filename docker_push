@@ -13,7 +13,7 @@ if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then
   echo >&2 "This is a PR, so no push to docker please."
 else
   docker build -t dkrud5g/magento-appdata:${TRAVIS_BRANCH} .
-  echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+  #echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
   docker push dkrud5g/magento-appdata:${TRAVIS_BRANCH}
 fi
 
