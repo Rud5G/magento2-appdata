@@ -3,7 +3,7 @@
 
 ## How to build & push
 
-    docker build -t dkrud5g/magento-appdata:CE-2.2.4 .
+    docker build -t dkrud5g/magento-appdata:CE-2.3.1 .
 
     docker push dkrud5g/magento-appdata
 
