@@ -2055,7 +2055,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://repo.magento.com/archives/magento/google-shopping-ads/magento-google-shopping-ads-3.0.1.0.zip",
-                "shasum": "5f5929ef9f2ec4ca048a2add261d22c92807630f"
+                "shasum": "ce31e720d60451784b9fdb3769e43e149f50d436"
             },
             "require": {
                 "guzzlehttp/guzzle": ">=6.0",
